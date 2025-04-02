@@ -291,7 +291,7 @@
 
 /* Reviews Section Styling */
 .reviews__container {
-    background-image: url(/images/testimonialsBg.jpg);
+    background-image: url(images/testimonialsBg.jpg);
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating */
@@ -834,7 +834,7 @@ body {
   .sources__page {
     font-family: Arial, sans-serif;
     background-color: #303831;
-    background-image: url(/images/sourcesBg.jpg);
+    background-image: url(images/sourcesBg.jpg);
     min-height: 100vh; /* Ensures the full page height */
     display: flex;
     flex-direction: column;
