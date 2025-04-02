@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSA Webmaster</title>
+    <link rel="stylesheet" href="styles.css">
+
+ <!-- fonts -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Gowun+Dodum&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+
+<body style="background-color: white;">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"> Root & Vine </a>
+<!-- This will allow the javascript programming -->
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+<!-- This will be the list of links to the other tabs or pages of the website  -->
+            <ul class="navbar__menu">
+<!-- Home page -->
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+<!-- Menu page  -->
+                <li class="navbar__item">
+                    <a href="menu.html" class="navbar__links">
+                        Menu
+                    </a>
+                </li>
+<!-- contact page -->
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">
+                        Contact
+                    </a>
+                </li>
+<!-- contact page -->
+                <li class="navbar__item">
+                    <a href="sources.html" class="navbar__links">
+                        Sources
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/images/sliderOne.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/images/sliderTwo.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/images/sliderThree.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <script>
+      let slideIndex = 1;
+      window.onload = function() {
+        showSlides(slideIndex);
+      };
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      // Auto-slide functionality every 3 seconds
+      setInterval(function() {
+        plusSlides(1);
+      }, 10000);
+    </script>
+
+
+
+
+<!-- Mission statement of restaurant * See the menu -->
+<div class="missionStatement__container">
+    <!-- Image -->
+    <img src="images/restaurant.jpg" alt="Restaurant dining area" class="missionStatement__image">
+
+    <!-- Text Container: Contains both the welcome and mission statement texts -->
+    <div class="missionStatement__textContainer">
+        <!-- Welcome Section Above -->
+        <div class="welcome__container">
+            <h1>Welcome To Root & Vine</h1>
+        </div>
+
+        <!-- Mission Statement Text -->
+        <p>
+            It's our mission at Root & Vine to nourish body and spirit with fresh, delicious, and sustainable plant-based cuisine. We aim to serve a welcoming place where every meal celebrates the glory of nature, the bounty of whole foods, and the bliss of community. Rooted in sustainability and fired by the vibrant flavors of the earth, we aim to cultivate a dining experience that is at once delicious and mindful—one plate at a time.
+        </p>
+
+        <p style="color:#303831;"> --- </p>
+
+        <p>
+            Our commitment goes beyond just food. We believe in creating a space where every guest feels at home, whether they are here for a quick bite or to share a meal with loved ones. Each dish is crafted with care and creativity, using only the finest, locally-sourced ingredients to ensure the highest quality and environmental responsibility. By choosing plant-based options, we not only nurture our bodies but also promote a healthier planet.
+        </p>
+
+        <p style="color:#303831;"> --- </p>
+
+        <p>
+            At Root & Vine, we are more than a restaurant—we are a movement. A movement toward a brighter, greener future where food is not only a source of nourishment but also a way to connect with nature and one another. Every meal is an opportunity to experience the joy of mindful eating, to savor flavors that are as good for the soul as they are for the planet, and to embrace the beauty of sustainability.
+        </p>
+    </div>
+</div>
+<!-- *************************************************************************************************** -->
+    <!-- TO DO: 
+     *Add button that leads to our process page  
+    -->
+
+  <!-- Meet the chefs -->
+  <div class="meetUs__container">
+    <div class="meetUs__text"> MEET OUR CHEFS </div>
+    <div class="meetUs__imagesContainer">
+        <div class="chef">
+            <img src="images/chefImages.jpg" alt="Chefs" class="meetUs__images">
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="about__header"> </div>
+
+
+
+<div class="ourStory__container">
+  <h1 class="ourStory__title">OUR STORY</h1>
+
+  <div class="ourStory__content">
+    <div class="ourStory__text">
+      <p>
+        Root & Vine was created with the simple goal of redefining plant-based dining by making it more accessible and sustainable. 
+        Inspired by the power of nature, we set out to create a space where anyone and everyone could enjoy meals built on real ingredients.
+      </p>
+
+      <p style="color:white;"> --- </p>
+
+      <p style="font-size: 30px">Our name reflects our vision:</p>
+      <ul>
+        <p style="color: white;"> -- </p>
+        <li><strong>Root</strong> – Signifying the natural goodness of plant-based foods.</li>
+        <li><strong>Vine</strong> – Signifying growth, sustainability, and the beauty of natural ingredients.</li>
+      </ul>
+    </div>
+
+    <img src="images/logo.jpg" alt="logo" class="ourStory__image">
+  </div>
+</div>
+
+
+
+<div class="about__header"> 
+    <img src="images/test.png" alt="worker">
+</div>
+
+
+<section id="timeline">
+
+    <div class="tl-item">
+      
+  
+    <div class="tl-bg" style="background-image: url('/images/harvest.jpg')"></div>
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 1 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Farming and Harvesting</h1>
+        <p>Fresh, organic vegetables and fruits are grown sustainably on local farms, nurtured with care to ensure peak flavor and nutritional value. Once ripe, they are carefully harvested by skilled farmers.</p>
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/processing.jpg)">
+        
+      </div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 2 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Processing Agricultural Goods</h1>
+        <p>After harvest, the produce is washed, sorted, and minimally processed to maintain freshness. Any necessary preservation methods, such as refrigeration, are used to keep the ingredients at their best.</p>
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/transportation.jpg)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 3 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu"> Food to Distribution Center</h1>
+        <p>The freshly harvested goods are transported from farms to a local distribution center, where they are inspected, stored, and organized for efficient delivery to restaurants and stores.</p>
+      </div>
+  
+    </div>
+      <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/stores.jpg)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 4 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1>Shipping Produce to Local Retail Stores</h1>
+        <p>Once sorted, the fresh ingredients are delivered to local grocery stores, co-ops, and restaurants like ours, ensuring that the community has access to high-quality, farm-fresh foods.</p>
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/farmersMarket.jpg)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 5 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Farmers' Market Display</h1>
+        <p>Some produce goes directly to farmers' markets, where local growers sell vibrant, just-harvested fruits and vegetables, connecting consumers with the people who grow their food.</p>
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/cook.jpg)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 6 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Cooking and Preparing a Meal</h1>
+        <p>At our restaurant, we craft delicious vegetarian dishes using these fresh, locally sourced ingredients. Every meal is prepared with care, highlighting the natural flavors and nutrients of our produce.</p>
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(/images/eat.jpg)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">- Day 7 -</p>
+      </div>
+  
+      <div class="tl-content">
+        <h1 class="f3 text--accent ttu">Enjoying the Meal</h1>
+        <p>The final step in the farm-to-table journey—savoring a wholesome, thoughtfully prepared meal. Whether dining in or taking out, each bite supports local farmers and a more sustainable food system.</p>
+      </div>
+  
+    </div>
+  </section>
+
+
+
+<!-- *************************************************************************************************** -->
+    <!-- TO DO: 
+     *Add button that leads to About us page  
+     *Make the images hovearable and have them say the name of chef and a blurb
+    -->
+
+
+<!-- Reviews Section -->
+<div class="reviews__container">
+  <h1 class="reviews__title">Testimonials</h1>
+
+  <div class="reviews__row">
+      <div class="review__box">
+          <p>"Root & Vine is an absolute dream for plant-based food lovers! The flavors are so rich and vibrant that even my non-vegetarian friends were impressed. The roasted butternut squash risotto was perfection, and the ambiance made the meal even better. Will definitely be back!"</p>
+          <span class="review__author">– Lena R.</span>
+      </div>
+      <div class="review__box">
+          <p>"Loved the rustic decor and cozy vibes. The staff was friendly, and the farm-to-table ingredients really made a difference. I do wish they had more gluten-free options, but overall, an amazing experience!"</p>
+          <span class="review__author">– Jordan W.</span>
+      </div>
+      <div class="review__box">
+          <p>"I love how creative their dishes are! The jackfruit tacos were a pleasant surprise, and the house-made cashew cheese was incredible. Would have loved a few more dessert options, but otherwise, a fantastic experience!"</p>
+          <span class="review__author">– Carlos P.</span>
+      </div>
+  </div>
+</div>
+
+
+<!-- Address and Hours Section -->
+        <div class="location__container">
+            <h2>Find Us Here</h2>
+            
+            <div class="location__info">
+                <p><strong>Root & Vine</strong></p>
+                <p>123 Greenway Blvd, Nashua, NH 03060</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: contact@rootandvine.com</p>
+            </div>
+
+            <div class="hours__info">
+                <h3>Operating Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 11:00 AM - 9:00 PM</li>
+                    <li>Saturday: 10:00 AM - 10:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+
+            <div class="map__container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.6472072016135!2d-71.46756668459542!3d42.765366079161175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a46d8e0f0891%3A0x3d7f56cb0e2b8f1a!2sNashua%2C%20NH!5e0!3m2!1sen!2sus!4v1645419918674!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+<!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <p><strong>WEBMASTER S3105</strong></p>
+                <p>© 2024 [Webmaster - TSA]. All rights reserved.</p>
+            </div>
+        </footer>
+        
+    </body>
+</html>

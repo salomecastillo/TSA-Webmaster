@@ -1,0 +1,870 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dynalight-regular {
+    font-family: "Dynalight", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+  .poiret-one-regular {
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .gowun-dodum-regular {
+    font-family: "Gowun Dodum", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.navbar{
+    background: #1f221f;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    font-family: "Gowun Dodum", serif;
+}
+
+#navbar__logo{
+    font-family: 'Dynalight', cursive;
+    background-color: #6bb47a;
+    background-image: linear-gradient(to top, #6bb47a 0%, #359943 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 90px;
+}
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 80px;
+}
+
+.navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar_btn{
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:#6bb47a;
+    color: #fff;
+}
+
+/* changes the color of the button when hovered over */
+.button:hover{
+    background: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* changes the color of the text when hovered over */
+.navbar__links:hover{
+    color:#f77062;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+/* java that triggers the animation*/
+    .navbar__menu.active{
+        background: #fafffb;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #133c16;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn{
+        padding-left: 8rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.missionStatement__container {
+    display: flex;
+    align-items: flex-start; /* Aligns everything at the top */
+    justify-content: flex-start; /* Aligns items to the left */
+    text-align: left;
+    background-color: #303831;
+    color: #fff;
+    font-family: "Gowun Dodum", serif;
+}
+
+.missionStatement__image {
+    margin: 2rem;
+    margin-right: 20px; /* Adds space between the image and the text */
+    height: 50%;
+    width: 35%;
+}
+
+.missionStatement__textContainer {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* Makes the texts stack vertically */
+    justify-content: flex-start;
+    padding: 5rem;
+    text-align: justify;
+}
+
+.welcome__container {
+    order: -1; /* Places the welcome text above */
+    margin-bottom: 20px; /* Adds space between the "Welcome" and mission statement text */
+    font-family: "Gowun Dodum", serif;
+}
+
+/* Container Styles */
+.meetUs__container {
+    display: flex;
+    flex-direction: column; /* Stacks text above images */
+    align-items: center; /* Centers everything */
+    text-align: center;
+    padding: 20px;
+    background-color: #303831;
+    color: #fff;
+}
+
+.meetUs__text {
+    font-size: 40px;
+    font-family: "Gowun Dodum", serif, bold;
+    margin-bottom: 1rem; /* Space between text and images */
+    color: #fff;
+    background-color: #303831;
+}
+
+/* Images Container */
+.meetUs__imagesContainer {
+    display: flex;
+    gap: 1rem; /* Adds space between images */
+    justify-content: center;
+    background-color: #303831;
+}
+
+/* Chef Image Styles */
+.chef {
+    position: relative; /* Necessary for positioning the hover text */
+}
+
+.meetUs__images {
+    height: 768px; /* Adjust size as needed */
+    width: 1256px; /* Adjust size as needed */
+}
+
+
+
+/* Reviews Section Styling */
+.reviews__container {
+    background-image: url(/images/testimonialsBg.jpg);
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #303831; /* Soft neutral background */
+}
+
+/* Title Styling */
+.reviews__title {
+    font-size: 2.8rem;
+    color: white;
+    font-family: "Poiret One", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* Reviews Row Layout */
+.reviews__row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Review Box Styling */
+.review__box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.6;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 30%;
+    min-width: 280px;
+    font-family: "Gowun Dodum", serif;
+}
+
+/* Hover Effect */
+.review__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Italicized Review Text */
+.review__box p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Author Name Styling */
+.review__author {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #133c16;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reviews__title {
+        font-size: 2.2rem;
+    }
+
+    .reviews__row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review__box {
+        max-width: 90%;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+/* new div */
+.address__container{
+    color: #406443;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 20px;
+    background-color: #fff;
+}
+.image__container{
+    order: 1;
+}
+
+.ourStory__container {
+    background-color: white;
+    color: #133c16;
+    font-family: "Poiret One", serif;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the section */
+    text-align: center; /* Center-aligns the title */
+}
+
+/* Center the Title */
+.ourStory__title {
+    font-family: "Poiret One", serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Flex container for text + image */
+.ourStory__content {
+    display: flex;
+    justify-content: space-between; /* Pushes text left & image right */
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Text Container */
+.ourStory__text {
+    font-family: "Gowun Dodum", serif;
+    flex: 1; /* Takes most of the space */
+    max-width: 60%; /* Ensures text stays on the left */
+    text-align: justify; /* Justifies the text */
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Styling the List */
+.ourStory__text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ourStory__text li {
+    font-size: 1.1rem;
+}
+
+/* Image Styling */
+.ourStory__image {
+    width: 30%; /* Smaller image size */
+    height: auto;
+    border-radius: 10px;
+    margin-left: 40px; /* Pushes image to the right */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .ourStory__content {
+        flex-direction: column; /* Stack elements */
+        align-items: center;
+    }
+
+    .ourStory__text {
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .ourStory__image {
+        width: 50%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+.about__header{
+    width: 100%;  
+    overflow: hidden; 
+    background-color: #303831;
+}
+
+.about__header img {
+    width: 100%;  
+    height: auto;  
+    display: block; 
+}
+
+.color__div{
+    background-color: #303831;
+    color:#303831;
+}
+
+/* ***************************************** CONTACT US ******************************************** */
+
+body {
+    background-color: #f8f8f8;;
+    background-attachment: fixed;
+    transition: background 0.1s ease-out;
+    color: black;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+/* Form container - No white background, just centered */
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #031625;
+}
+
+/* Inputs & Textarea - Minimalist bottom border */
+input[type="text"], select, textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Highlight effect on focus */
+input:focus, textarea:focus, select:focus {
+    border-bottom: 2px solid #04AA6D;
+}
+
+/* Dropdown styling */
+select {
+    cursor: pointer;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: #04AA6D;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #038a5a;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.menu__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 10px; /* Adds some space between images */
+    max-width: 100%;
+    padding: 10px;
+}
+
+.menu__container img {
+    max-width: 45%; /* Ensures images fit side by side */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .menu__container img {
+        max-width: 90%; /* Makes images stack on smaller screens */
+    }
+}
+
+
+/* HOURS AND ADDRESS */ 
+.location__container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    margin-top: 50px;
+}
+
+.location__info, .hours__info {
+    font-family: "Gowun Dodum", serif;
+    margin-bottom: 20px;
+}
+
+.location__info p, .hours__info ul {
+    font-size: 18px;
+    color: #333;
+}
+
+.hours__info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours__info li {
+    margin: 5px 0;
+}
+
+.map__container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #303831;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 10vh;
+}
+
+.section__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303831;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  
+  #timeline {
+    display: flex;
+    background-color: #031625;
+  }
+  
+  .tl-item {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    min-height: 600px;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .tl-item:hover {
+    width: 30% !important;
+  }
+  
+  /* Background image and red gradient overlay */
+  .tl-bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: opacity 0.5s ease;
+    opacity: 0.4; /* Slight opacity for the image before hover */
+  }
+  
+  .tl-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 101, 85, 0.6); /*rgba(255, 0, 0, 0.6); /* Red transparent overlay */
+    z-index: 1;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.5s ease;
+    font-family: "Gowun Dodum", serif;
+  }
+  
+  .tl-item:hover:before {
+    font-family: "Gowun Dodum", serif;
+    opacity: 0; /* Remove the  on hover */
+  }
+  
+  /* Content inside the timeline item */
+  .tl-content {
+    font-family: "Gowun Dodum", serif;
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 55%;
+    opacity: 0;
+  }
+  
+  .tl-item:hover .tl-content {
+    font-family: "Gowun Dodum", serif;
+    opacity: 1; /* Make the content visible on hover */
+  }
+  
+  .tl-content h1 {
+    font-family:"Gowun Dodum", serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.44rem;
+    font-weight: normal;
+  }
+  
+  .tl-year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+  
+  .tl-year p {
+    font-family: "Gowun Dodum", serif, bold;
+    font-size: 1.728rem;
+    line-height: 0;
+  }
+  .sources__page {
+    font-family: Arial, sans-serif;
+    background-color: #303831;
+    background-image: url(/images/sourcesBg.jpg);
+    min-height: 100vh; /* Ensures the full page height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pushes content down from navbar and away from footer */
+.sources__content {
+    flex: 1; /* Allows it to take up remaining space */
+    display: flex;
+    align-items: center; /* Centers content box vertically */
+    justify-content: center; /* Centers content box horizontally */
+    padding: 80px 0; /* Adds space from navbar and footer */
+}
+
+/* Centers the text content */
+.content__box {
+    color: white;
+    background-color: #303831;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    max-width: 800px; /* Prevents excessive width */
+    font-family:"Gowun Dodum", serif, bold;
+}
+
+
+
+  
+  
+  
+  

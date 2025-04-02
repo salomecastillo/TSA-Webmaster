@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- fonts -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Gowun+Dodum&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body id="gradient-bg">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"> Root & Vine </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/menu.html" class="navbar__links">Menu</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/sources.html" class="navbar__links">Sources</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1> Contact Us </h1>
+        <form id="contactForm">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Address and Hours Section -->
+    <div class="location__container">
+        <h2>Find Us Here</h2>
+        
+        <div class="location__info">
+            <p><strong>Root & Vine</strong></p>
+            <p>123 Greenway Blvd, Nashua, NH 03060</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: contact@rootandvine.com</p>
+        </div>
+
+        <div class="hours__info">
+            <h3>Operating Hours</h3>
+            <ul>
+                <li>Monday - Friday: 11:00 AM - 9:00 PM</li>
+                <li>Saturday: 10:00 AM - 10:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+
+        <div class="map__container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.6472072016135!2d-71.46756668459542!3d42.765366079161175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a46d8e0f0891%3A0x3d7f56cb0e2b8f1a!2sNashua%2C%20NH!5e0!3m2!1sen!2sus!4v1645419918674!5m2!1sen!2sus" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    
+    <script>
+        // Form Submission Redirection
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            window.location.href = "contacted.html"; // Redirect to Thank You page
+        });
+    </script>
+    
+    
+
+</body>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>WEBMASTER S3105</strong></p>
+            <p>© 2024 [Webmaster - TSA]. All rights reserved.</p>
+        </div>
+    </footer>  
+</html>
