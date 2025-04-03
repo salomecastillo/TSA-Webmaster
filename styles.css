@@ -861,7 +861,51 @@ body {
     max-width: 800px; /* Prevents excessive width */
     font-family:"Gowun Dodum", serif, bold;
 }
+.chatbot__page {
+    font-family: Arial, sans-serif;
+    background-color: #303831;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.chatbot__container {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 550px;
+}
+
+label, select, button {
+    color:#303831;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    background-color: #415744;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e4a42;
+}
+
+#result {
+    color: #993535;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
   
