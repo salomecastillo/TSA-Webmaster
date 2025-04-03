@@ -883,6 +883,7 @@ body {
     width: 550px;
     margin-top: 120px; /* Increase margin to push it further down */
     position: relative;  /* Make sure it’s not fixed or causing issues */
+    margin-bottom: 20px;
 }
 
 
