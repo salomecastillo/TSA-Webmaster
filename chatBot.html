@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Menu Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+<body class="chatbot__page">
+    <div class="chatbot__container">
+        <h2 style="color:#f77062;">Welcome to Root & Vine's Meal Recommender!</h2>
+        <p>Answer a few quick questions, and we'll suggest the perfect dish for you.</p>
+
+        <label for="mood">What is your mood today?</label>
+        <select id="mood">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="adventurous">Adventurous</option>
+            <option value="relaxed">Relaxed</option>
+        </select>
+
+        <label for="height">How tall are you?</label>
+        <select id="height">
+            <option value="short">Short</option>
+            <option value="average">Average</option>
+            <option value="tall">Tall</option>
+        </select>
+
+        <label for="animal">What is your favorite animal?</label>
+        <select id="animal">
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="lion">Lion</option>
+            <option value="rabbit">Rabbit</option>
+        </select>
+
+        <button onclick="recommendDish()"> Get Your Dish </button>
+
+        <div id="result">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
