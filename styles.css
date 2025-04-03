@@ -497,6 +497,7 @@ body {
 
 /* Form container - No white background, just centered */
 .container {
+    font-family: "Gowun Dodum", serif, bold;
     max-width: 500px;
     margin: 100px auto;
     text-align: center;
