@@ -834,7 +834,7 @@ body {
   .sources__page {
     font-family: Arial, sans-serif;
     background-color: #303831;
-    background-image: url(/images/sourcesBg.jpg);
+    background-image: url(images/sourcesBg.jpg);
     min-height: 100vh; /* Ensures the full page height */
     display: flex;
     flex-direction: column;
@@ -865,7 +865,7 @@ body {
 .chatbot__page { 
     font-family: Arial, sans-serif;
     background-color: #303831;
-    background-image: url(/images/sourcesBg.jpg);
+    background-image: url(images/sourcesBg.jpg);
     color: white;
     min-height: 100vh;  /* Full screen height */
     display: flex;
