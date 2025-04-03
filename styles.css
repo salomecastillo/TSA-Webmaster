@@ -843,6 +843,8 @@ body {
 
 /* Pushes content down from navbar and away from footer */
 .sources__content {
+    color: white;
+    font-family:"Gowun Dodum", serif, bold;
     flex: 1; /* Allows it to take up remaining space */
     display: flex;
     align-items: center; /* Centers content box vertically */
