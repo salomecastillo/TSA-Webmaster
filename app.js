@@ -32,16 +32,6 @@ if (reviews.length > 0) {
 // Initial Display
 showReview(reviewIndex);
 
-// Radial Gradient Mouse Effect
-document.addEventListener("mousemove", function (e) {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    document.body.style.background = `
-        radial-gradient(circle at ${x}px ${y}px, rgba(4, 170, 109, 0.3), transparent 50%)
-    `;
-});
-
 // Review Slider Navigation (Next and Prev Buttons)
 const nextButton = document.querySelector(".next");
 const prevButton = document.querySelector(".prev");
