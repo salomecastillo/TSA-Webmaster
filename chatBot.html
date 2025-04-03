@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot Menu Recommender</title>
     <link rel="stylesheet" href="styles.css">
+
     <!-- fonts -->   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +13,9 @@
     
 </head>
 <body class="chatbot__page">
-        <nav class="navbar">
+    <nav class="navbar">
         <div class="navbar__container">
-            <a href="index.html" id="navbar__logo"> Root & Vine </a>
+            <a href="/" id="navbar__logo"> Root & Vine </a>
 <!-- This will allow the javascript programming -->
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -29,6 +30,12 @@
                         Home
                     </a>
                 </li>
+<!-- Meet Us -->
+                <li class="navbar__item">
+                  <a href="#meetUs" class="navbar__links">
+                      About
+                  </a>
+                </li>
 <!-- Menu page  -->
                 <li class="navbar__item">
                     <a href="menu.html" class="navbar__links">
@@ -41,7 +48,7 @@
                         Contact
                     </a>
                 </li>
-<!-- chatbot page -->
+<!-- contact page -->
                 <li class="navbar__item">
                   <a href="chatBot.html" class="navbar__links">
                       Find Meal
@@ -58,7 +65,7 @@
     </nav>
     <div class="chatbot__container">
         <h2 style="color:#f77062;">Welcome to Root & Vine's Meal Recommender!</h2>
-        <p>Answer a few quick questions, and we'll suggest the perfect dish for you!</p>
+        <p>Answer a few quick questions, and we'll suggest the perfect dish for you.</p>
 
         <label for="mood">What is your mood today?</label>
         <select id="mood">
@@ -91,7 +98,7 @@
 
     <script src="app.js"></script>
 </body>
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <p><strong>WEBMASTER S3105</strong></p>
@@ -99,3 +106,4 @@
         </div>
     </footer>  
 </html>
+
