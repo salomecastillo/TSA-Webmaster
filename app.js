@@ -53,3 +53,21 @@ nextButton.addEventListener("click", function() {
 prevButton.addEventListener("click", function() {
     changeReview(-1);
 });
+
+// chatbot function
+function recommendDish() {
+  const mood = document.getElementById("mood").value;
+  const height = document.getElementById("height").value;
+  const animal = document.getElementById("animal").value;
+
+  const recommendations = {
+      happy: ["BBQ Jackfruit Sandwich", "Vegan Banana Pancakes", "Zucchini Fritters"],
+      sad: ["Mediterranean Chickpea Salad", "Tofu Scramble With Avocado Toast", "Spicy Peanut Noodle Bowl"],
+      adventurous: ["Avocado Bruschetta", "Chia Seed Pudding", "Eggplant Parmesan"],
+      relaxed: ["Vegan Chocolate Avocado Mousse", "Mushroom & Spinach Risotto", "Crispy Cauliflower Wings"]
+  };
+
+  const randomDish = recommendations[mood][Math.floor(Math.random() * recommendations[mood].length)];
+
+  document.getElementById("result").innerHTML = `<h3>Your Recommended Dish:</h3><p>${randomDish}</p>`;
+}
